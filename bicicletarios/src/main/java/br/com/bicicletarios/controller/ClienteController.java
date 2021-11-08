@@ -22,7 +22,7 @@ public class ClienteController {
 	ClienteService clienteService = new ClienteService();
 
 	@GET
-	//@Path(value = "retornaClientes")
+	@Path(value = "retornaClientes")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getAllClientes() {
 		List<ClienteModel> clientes = clienteService.listarClientes();
