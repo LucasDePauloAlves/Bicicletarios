@@ -14,7 +14,7 @@ public class BicicletarioDAO implements BicicletarioRemote {
 	private EntityManager em;
 
 	public List<BicicletarioModel> listarBicicletarios() {
-		return em.createQuery("select f from BicicletarioModel f", BicicletarioModel.class).getResultList();
+		return em.createQuery("select r from BicicletarioModel r", BicicletarioModel.class).getResultList();
 	}
 
 	@Override
