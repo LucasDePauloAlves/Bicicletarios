@@ -2,8 +2,9 @@ package br.com.bicicletarios.service;
 
 import java.util.List;
 import javax.ejb.Stateless;
-import br.com.bicicletarios.DTO.BicicletaDTO;
+
 import br.com.bicicletarios.dao.BicicletaDAO;
+import br.com.bicicletarios.dto.BicicletaDTO;
 import br.com.bicicletarios.model.BicicletaModel;
 
 @Stateless
@@ -28,7 +29,7 @@ public class BicicletaService {
 		return bicicletaDTO;
 	}
 
-	public BicicletaDTO createNewDTO(BicicletaDTO BicicletaModel) {
+	public BicicletaDTO createNewDTO(BicicletaDTO bicicletaModel) {
 		BicicletaDTO clienteDTO = new BicicletaDTO();
 		return clienteDTO;
 	}

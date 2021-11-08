@@ -12,16 +12,18 @@ public class BicicletaDAO implements BicicletaRemote {
 
 	@PersistenceContext
 	private EntityManager em;
-	
-	public BicicletaDAO(){};
-	
+
+	public BicicletaDAO() {
+	};
+
 	public BicicletaDAO(EntityManager em) {
 		this.em = em;
 	}
-	
+
 	public List<BicicletaModel> listarBicicletas() {
 		return em.createQuery("select f from BicicletaModel f", BicicletaModel.class).getResultList();
 	}
+
 	@Override
 	public void salvar(BicicletaModel bicicletaModel) {
 		em.persist(bicicletaModel);
@@ -37,7 +39,7 @@ public class BicicletaDAO implements BicicletaRemote {
 	public BicicletaModel consultarPorId(Long id) {
 		return em.find(BicicletaModel.class, id);
 	}
-	
+
 	@Override
 	public List<BicicletaModel> getTodasBicicletas() {
 		return em.createQuery("SELECT * FROM Bicicletas", BicicletaModel.class).getResultList();

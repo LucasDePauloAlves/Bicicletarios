@@ -1,8 +1,8 @@
-package br.com.bicicletarios.DTO;
+package br.com.bicicletarios.dto;
 
 import java.util.Objects;
 
-public class BicicletaDTO {
+public class BicicletarioDTO {
 
 	private long id;
 	private String uf;
@@ -19,6 +19,7 @@ public class BicicletaDTO {
 	public void setUf(String uf) {
 		this.uf = uf;
 	}
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(id, uf);
@@ -31,12 +32,12 @@ public class BicicletaDTO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		BicicletaDTO other = (BicicletaDTO) obj;
+		BicicletarioDTO other = (BicicletarioDTO) obj;
 		return id == other.id && Objects.equals(uf, other.uf);
 	}
 	@Override
 	public String toString() {
-		return "BicicletaDTO [id=" + id + ", uf=" + uf + "]";
+		return "BicicletarioDTO [id=" + id + ", uf=" + uf + "]";
 	}
-
+		
 }

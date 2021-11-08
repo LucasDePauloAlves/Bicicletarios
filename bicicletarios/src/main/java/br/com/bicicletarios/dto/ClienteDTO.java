@@ -1,4 +1,4 @@
-package br.com.bicicletarios.DTO;
+package br.com.bicicletarios.dto;
 
 import java.util.Objects;
 

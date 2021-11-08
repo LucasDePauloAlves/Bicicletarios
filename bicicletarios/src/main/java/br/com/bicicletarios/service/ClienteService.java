@@ -2,8 +2,9 @@ package br.com.bicicletarios.service;
 
 import java.util.List;
 import javax.ejb.Stateless;
-import br.com.bicicletarios.DTO.ClienteDTO;
+
 import br.com.bicicletarios.dao.ClienteDAO;
+import br.com.bicicletarios.dto.ClienteDTO;
 import br.com.bicicletarios.model.ClienteModel;
 
 @Stateless
