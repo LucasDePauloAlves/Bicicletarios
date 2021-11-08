@@ -14,7 +14,7 @@ import javax.persistence.Table;
 @Table(name = "CLIENTES")
 public class ClienteModel implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; //teste de commit
 
 	@Id
 	@Column(name = "ID", length = 6)
