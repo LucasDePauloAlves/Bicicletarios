@@ -13,13 +13,6 @@ public class BicicletaDAO implements BicicletaRemote {
 	@PersistenceContext
 	private EntityManager em;
 
-	public BicicletaDAO() {
-	};
-
-	public BicicletaDAO(EntityManager em) {
-		this.em = em;
-	}
-
 	public List<BicicletaModel> listarBicicletas() {
 		return em.createQuery("select f from BicicletaModel f", BicicletaModel.class).getResultList();
 	}

@@ -14,14 +14,8 @@ public class ClienteDAO implements ClienteRemote {
 	@PersistenceContext
 	private EntityManager em;
 	
-	public ClienteDAO(){};
-	
-	public ClienteDAO(EntityManager em) {
-		this.em = em;
-	}
-	
 	public List<ClienteModel> listarClientes() {
-		return em.createQuery("select f from ClienteModel f", ClienteModel.class).getResultList();
+		return em.createQuery("select c from ClienteModel c", ClienteModel.class).getResultList();
 	}
 	@Override
 	public void salvar(ClienteModel clienteModel) {
