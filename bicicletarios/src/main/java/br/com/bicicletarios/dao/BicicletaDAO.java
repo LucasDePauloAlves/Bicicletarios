@@ -12,7 +12,7 @@ public class BicicletaDAO implements BicicletaRemote {
 
 	@PersistenceContext
 	private EntityManager em;
-
+	
 	public BicicletaDAO() {
 	};
 
@@ -21,7 +21,7 @@ public class BicicletaDAO implements BicicletaRemote {
 	}
 
 	public List<BicicletaModel> listarBicicletas() {
-		return em.createQuery("select f from BicicletaModel f", BicicletaModel.class).getResultList();
+		return em.createQuery("select b from BicicletaModel b", BicicletaModel.class).getResultList();
 	}
 
 	@Override

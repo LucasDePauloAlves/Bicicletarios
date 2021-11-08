@@ -11,7 +11,6 @@ public class FactoryDAO {
 	@PersistenceContext(unitName = "bicicletarios")
 	private EntityManager em;
 	
-	
 	@Produces
 	public ClienteDAO criarClienteDAO() {
 		return new ClienteDAO(em);
